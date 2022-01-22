@@ -2,7 +2,7 @@ import React from 'react';
 
 const InputBar = ({inputLabel, inputIcon}) => {
   return (
-  <div>
+  <div className="inputBar">
       <label for="inputAmount">{inputLabel}</label>
       <div className="inputField">
         <i className={inputIcon}></i>

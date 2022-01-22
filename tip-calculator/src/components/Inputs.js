@@ -7,7 +7,7 @@ import PersonIcon from '../images/icon-person.svg'
 
 const inputs = () => {
   return (
-  <div>
+  <div className='inputs'>
       <InputBar inputLabel="Bill" inputIcon={DollarIcon}/>
       <div className='input-button-section'>
         <p>Select Tip %</p>

@@ -1,0 +1,151 @@
+// Font
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+/* CSS RESET */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Space Mono', monospace;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,button {
+  font: inherit;
+  font-size: 24px;
+}
+
+/* END CSS RESET */
+
+/* DEFAULT STYLES*/
+
+// Primary color
+$strongCyan: hsl(172, 67%, 45%);
+
+// Neutral colors
+$veryDarkCyan: hsl(183, 100%, 15%);
+$darkGrayishCyan1: hsl(186, 14%, 43%);
+$darkGrayishCyan2: hsl(184, 14%, 56%);
+$lightGrayishCyan1: hsl(185, 41%, 84%);
+$lightGrayishCyan2: hsl(189, 41%, 97%);
+$white:hsl(0, 0%, 100%);
+
+.App {
+  // border: 2px solid red;
+  background-color: $lightGrayishCyan1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  h1{
+    color: $veryDarkCyan;
+    font-size: 24px;
+    margin: 2rem;
+    // border: 2px solid black;
+    width: 100px;
+    height: 70px;
+    text-align: center;
+    overflow-wrap: break-word;
+    letter-spacing: 0.5rem;
+  }
+}
+
+.main-ui {
+  // border: 2px solid yellow;
+  background-color: $white;
+  width: 100vw;
+  padding: 0rem 1.5rem;
+  border-radius: 1.2rem 1.2rem 0 0;
+}
+
+.inputs {
+  border: 2px solid blue;
+  margin: 1rem 0rem;
+}
+
+.inputBar {
+  border: 2px solid hotpink;
+}
+
+.inputBtn {
+  border: 2px solid salmon;
+}
+
+.customBtn {
+  background: green;
+}
+
+.results {
+  // border: 2px solid green;
+  background-color: $veryDarkCyan;
+  color: $white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.result-section {
+  // border: 2px solid purple;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0.7rem 0;
+}
+
+.result-label {
+  // border: 2px solid goldenrod;
+  h2{
+    font-size: 16px;
+  }
+  p {
+    color: $darkGrayishCyan2;
+    font-size: 14px;
+    font-weight: 700;
+  }
+}
+
+.result-amount {
+  // border: 2px solid lightpink;
+  font-size: 32px;
+  color: $strongCyan;
+  font-weight: 700;
+}
+
+.resetBtn {
+  background-color: $strongCyan;
+  border: none;
+  border-radius: 5px;
+  font-weight: 700;
+  color: $veryDarkCyan;
+  margin: 1rem 0 0 0;
+  padding: 0.5rem;
+  font-size: 20px;
+}
