@@ -8,7 +8,7 @@ const ResultsDisplay = ({label, amount}) => {
         <p>/ person</p>
       </div>  
       <div className='result-amount'>
-          ${amount}
+          ${(Math.round(amount * 100) / 100).toFixed(2)}
       </div>
   </div>);
 };

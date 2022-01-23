@@ -3,10 +3,10 @@ import React from 'react';
 const InputBar = ({inputLabel, inputIcon}) => {
   return (
   <div className="inputBar">
-      <label for="inputAmount">{inputLabel}</label>
+      <label htmlFor="inputAmount">{inputLabel}</label>
       <div className="inputField">
-        <i className={inputIcon}></i>
-        <input name="inputAmount" type="number"></input>
+        {/* <img src={inputIcon}/> */}
+        <input name="inputAmount" type="number" step="any" placeholder="0"></input>
       </div>
   </div>);
 };

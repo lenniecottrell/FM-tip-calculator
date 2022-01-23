@@ -83,29 +83,91 @@ $white:hsl(0, 0%, 100%);
   padding: 0rem 1.5rem;
   border-radius: 1.2rem 1.2rem 0 0;
 }
-
-.inputs {
-  border: 2px solid blue;
-  margin: 1rem 0rem;
+//remove increment/decrement buttons from the input fields
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+-webkit-appearance: none; 
 }
 
-.inputBar {
-  border: 2px solid hotpink;
+input[type=number] {
+-moz-appearance: textfield;
+background-color: $lightGrayishCyan2;
+border: none;
+padding: 0.3rem;
+}
+
+.inputs {
+  // border: 2px solid blue;
+  margin: 1.5rem 0.5rem;
+  label, p{
+    font-weight: 700;
+    color:$darkGrayishCyan1;
+    margin: 10px 0;
+  }
+  .inputField {
+    margin-top: 10px;
+  }
+  input {
+    width: 100%;
+    text-align: right;
+    font-weight: 700;
+    color: $veryDarkCyan;
+    padding-right: 10px;
+  }
+}
+
+.input-button-section {
+  // border: 2px solid yellow;
+  margin: 1.5rem 0;
+}
+
+.button-grid {
+  // border: 2px solid brown;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-weight: 700;
 }
 
 .inputBtn {
-  border: 2px solid salmon;
+  // border: 2px solid salmon;
+  background-color: $veryDarkCyan;
+  width: 150px;
+  margin: 0.5rem 0;
+  padding: 0.5rem 0;
+  color: $lightGrayishCyan2;
+  border: none;
+  border-radius: 5px;
 }
 
-.customBtn {
-  background: green;
+.inputBtn:hover {
+  color: $veryDarkCyan;
+  background-color: $strongCyan;
+}
+
+input[name="custom-button"] {
+  background-color: $lightGrayishCyan2;
+  border: none;
+  border-radius: 5px;
+  margin: 0.5rem 0;
+  padding: 0.5rem 0;
+  width: 150px;
+  padding-right: 1rem;
+}
+
+::placeholder {
+  text-align: right;
+  font-weight: 700;
+  opacity: 1;
+  color: $darkGrayishCyan1;
 }
 
 .results {
   // border: 2px solid green;
   background-color: $veryDarkCyan;
-  color: $white;
+  color: $lightGrayishCyan2;
   border-radius: 1rem;
+  margin-top: 2rem;
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -138,6 +200,10 @@ $white:hsl(0, 0%, 100%);
   color: $strongCyan;
   font-weight: 700;
 }
+
+// .resetBtn:hover {
+
+// }
 
 .resetBtn {
   background-color: $strongCyan;
