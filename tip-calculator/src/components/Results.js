@@ -1,11 +1,10 @@
 import React from 'react';
-import { useState } from 'react';
 import ResultsDisplay from './ResultsDisplay';
 
-const Results = ({tipData, totalData}) => {
-  
-  const [tipPerPerson, setTipPerPerson] = useState(0.00)
-  const [totalPerPerson, setTotalPerPerson] = useState(0.00)
+const Results = ({billTotal, tipPercent, numPeople}) => {
+
+  const tipPerPerson = (billTotal * tipPercent) / numPeople
+
   return <div className='results'>
       <ResultsDisplay 
         label="Tip Amount"
@@ -13,7 +12,7 @@ const Results = ({tipData, totalData}) => {
       />
       <ResultsDisplay 
         label="Total"
-        amount={totalPerPerson}
+        amount={billTotal / numPeople + tipPerPerson}
       />
       <button className='resetBtn'>RESET</button>
   </div>;

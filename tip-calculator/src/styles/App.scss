@@ -114,6 +114,9 @@ padding: 0.3rem;
     color: $veryDarkCyan;
     padding-right: 10px;
   }
+  input:focus::placeholder {
+    color:transparent;
+  }
 }
 
 .input-button-section {
@@ -201,17 +204,19 @@ input[name="custom-button"] {
   font-weight: 700;
 }
 
-// .resetBtn:hover {
-
-// }
-
 .resetBtn {
-  background-color: $strongCyan;
+  background-color: hsl(183, 100%, 22%);
   border: none;
   border-radius: 5px;
   font-weight: 700;
-  color: $veryDarkCyan;
+  color: hsl(183, 100%, 19%);
   margin: 1rem 0 0 0;
   padding: 0.5rem;
   font-size: 20px;
+}
+
+.resetBtn-active {
+  background-color: $strongCyan;
+  color: $veryDarkCyan;
+
 }
