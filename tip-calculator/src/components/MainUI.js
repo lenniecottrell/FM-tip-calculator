@@ -23,6 +23,7 @@ const MainUI = () => {
           setTipPercent={setTipPercent}
           setBillTotal={setBillTotal}
           setNumPeople={setNumPeople}
+          numPeople={numPeople}
         />
         <Results 
           billTotal={billTotal}

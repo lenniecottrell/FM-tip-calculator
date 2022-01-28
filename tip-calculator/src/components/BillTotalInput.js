@@ -2,7 +2,7 @@ import React from 'react';
 // import DollarIcon from "../images/icon-dollar.svg"
 
 
-const BillTotalInput = ({handleBillInput, setBillTotal}) => {
+const BillTotalInput = ({handleBillInput}) => {
 
 
   return (

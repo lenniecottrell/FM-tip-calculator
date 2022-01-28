@@ -4,14 +4,14 @@ import PartyInput from './PartyInput'
 import InputButton from './InputButton'
 import InputCustomButton from './InputCustomButton'
 
-const inputs = ({setTipPercent, setNumPeople, setBillTotal}) => {
+const inputs = ({setTipPercent, setNumPeople, setBillTotal, numPeople}) => {
 
     const handleBillInput = (e) => {
     setBillTotal(e.target.value)
   }
 
     const handlePeople = (e) => {
-    setNumPeople(e.target.value)
+        setNumPeople(e.target.value)
   }
 
   return (
@@ -25,7 +25,7 @@ const inputs = ({setTipPercent, setNumPeople, setBillTotal}) => {
             <InputButton tipPercent="15" setTipPercent={setTipPercent}/>
             <InputButton tipPercent="25" setTipPercent={setTipPercent}/>
             <InputButton tipPercent="50" setTipPercent={setTipPercent}/>
-            <InputCustomButton />
+            <InputCustomButton setTipPercent={setTipPercent}/>
         </div>
       </div>
       <PartyInput handlePeople={handlePeople}/>
