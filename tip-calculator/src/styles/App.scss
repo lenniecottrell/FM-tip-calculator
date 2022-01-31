@@ -97,7 +97,6 @@ padding: 0.3rem;
 }
 
 .inputs {
-  // border: 2px solid blue;
   margin: 1.5rem 0.5rem;
   label, p{
     font-weight: 700;
@@ -120,12 +119,10 @@ padding: 0.3rem;
 }
 
 .input-button-section {
-  // border: 2px solid yellow;
   margin: 1.5rem 0;
 }
 
 .button-grid {
-  // border: 2px solid brown;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -133,7 +130,6 @@ padding: 0.3rem;
 }
 
 .inputBtn {
-  // border: 2px solid salmon;
   background-color: $veryDarkCyan;
   width: 150px;
   margin: 0.5rem 0;
@@ -166,7 +162,6 @@ input[name="custom-button"] {
 }
 
 .results {
-  // border: 2px solid green;
   background-color: $veryDarkCyan;
   color: $lightGrayishCyan2;
   border-radius: 1rem;
@@ -177,7 +172,6 @@ input[name="custom-button"] {
 }
 
 .result-section {
-  // border: 2px solid purple;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -186,7 +180,6 @@ input[name="custom-button"] {
 }
 
 .result-label {
-  // border: 2px solid goldenrod;
   h2{
     font-size: 16px;
   }
@@ -198,7 +191,6 @@ input[name="custom-button"] {
 }
 
 .result-amount {
-  // border: 2px solid lightpink;
   font-size: 32px;
   color: $strongCyan;
   font-weight: 700;
@@ -218,5 +210,10 @@ input[name="custom-button"] {
 .resetBtn-active {
   background-color: $strongCyan;
   color: $veryDarkCyan;
-
+  border: none;
+  border-radius: 5px;
+  font-weight: 700;
+  margin: 1rem 0 0 0;
+  padding: 0.5rem;
+  font-size: 20px;
 }

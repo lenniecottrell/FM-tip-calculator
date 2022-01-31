@@ -1,20 +1,20 @@
 import React from 'react';
 import ResultsDisplay from './ResultsDisplay';
 
-const Results = ({billTotal, tipPercent, numPeople}) => {
+const Results = ({billTotal, tipPercent, numPeople , isActive, handleReset}) => {
 
-  const tipPerPerson = (billTotal * tipPercent) / numPeople
+  const tipPerPerson = (billTotal * tipPercent ) / numPeople
 
   return <div className='results'>
       <ResultsDisplay 
         label="Tip Amount"
-        amount={tipPerPerson}
+        amount={numPeople === 0  || isNaN(numPeople)===true  ? "0.00" : tipPerPerson}
       />
       <ResultsDisplay 
         label="Total"
-        amount={billTotal / numPeople + tipPerPerson}
+        amount={numPeople === 0 || isNaN(numPeople)===true ? "0.00" : billTotal / numPeople + tipPerPerson}
       />
-      <button className='resetBtn'>RESET</button>
+      <button className={`resetBtn${isActive ? "-active" : ""}`} onClick={handleReset}>RESET</button>
   </div>;
 };
 
