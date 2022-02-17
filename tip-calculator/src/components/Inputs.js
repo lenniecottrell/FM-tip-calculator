@@ -18,19 +18,21 @@ const inputs = ({setTipPercent, setNumPeople, billTotal, setBillTotal, numPeople
     }
 
     const handlePeople = (e, billTotal, numPeople) => {
-      console.log("from handlePeople:", numPeople);
-      if (numPeople === "" || isNaN(numPeople) === true) {
+      console.log("from handlePeople start: ", numPeople);
+      console.log("e.target.value: ", e.target.value);
+      if (e.target.value === "" || isNaN(numPeople) === true || e.target.value===undefined || e.target.value === null) {
         setNumPeople(0)
+        setIsActive(false)
       }
       if (e.target.value > 0){
         setIsActive(true);
       } else if ((e.target.value === "" || isNaN(e.target.value) === true) && billTotal > 0) {
-        setIsActive(true);
         setNumPeople(0)
-      } else if (e.target.value === "" || isNaN(e.target.value) === true){
-        setIsActive(false)
+        setIsActive(true);
       }
       setNumPeople(e.target.value);
+      console.log("from handlePeople end: ", numPeople);
+
     }
 
   return (
