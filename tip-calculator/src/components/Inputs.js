@@ -18,6 +18,7 @@ const inputs = ({setTipPercent, setNumPeople, billTotal, setBillTotal, numPeople
     }
 
     const handlePeople = (e, billTotal, numPeople) => {
+      console.log("from handlePeople:", numPeople);
       if (numPeople === "" || isNaN(numPeople) === true) {
         setNumPeople(0)
       }

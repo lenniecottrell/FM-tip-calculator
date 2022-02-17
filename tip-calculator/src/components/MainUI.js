@@ -1,10 +1,10 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import Inputs from './Inputs';
 import Results from './Results';
 
 const MainUI = () => {
   const [numPeople, setNumPeople] = useState(0)
-  const [billTotal, setBillTotal] = useState("")
+  const [billTotal, setBillTotal] = useState(0)
   const [tipPercent, setTipPercent] = useState(0)
   const [isActive, setIsActive] = useState(false)
 
@@ -14,6 +14,13 @@ const MainUI = () => {
     setIsActive(false);
   }
   
+  useEffect(() => {
+     if (billTotal > 0 || numPeople > 0) {
+    setIsActive(true);
+  }
+  }, [billTotal, numPeople])
+ 
+  console.log("from mainUI: ", numPeople)
   return (
     <div className='main-ui'>
         <Inputs 
