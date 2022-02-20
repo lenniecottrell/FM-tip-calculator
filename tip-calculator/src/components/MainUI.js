@@ -3,15 +3,16 @@ import Inputs from './Inputs';
 import Results from './Results';
 
 const MainUI = () => {
-  const [numPeople, setNumPeople] = useState(undefined)
-  const [billTotal, setBillTotal] = useState(undefined)
+  const [numPeople, setNumPeople] = useState("")
+  const [billTotal, setBillTotal] = useState("")
   const [tipPercent, setTipPercent] = useState(0)
   const [isActive, setIsActive] = useState(false)
+  const [percentActive, setPercentActive] = useState(false)
 
   const handleReset = () => {
     console.log("clicked reset")
-    setBillTotal(undefined);
-    setNumPeople(undefined)
+    setBillTotal("");
+    setNumPeople("")
     setIsActive(false);
   }
   
@@ -21,7 +22,6 @@ const MainUI = () => {
   }
   }, [billTotal, numPeople])
  
-  console.log("from mainUI: ", numPeople)
   return (
     <div className='main-ui'>
         <Inputs 
@@ -31,6 +31,8 @@ const MainUI = () => {
           numPeople={numPeople}
           billTotal={billTotal}
           setIsActive={setIsActive}
+          percentActive={percentActive}
+          setPercentActive={setPercentActive}
         />
         <Results 
           billTotal={billTotal}

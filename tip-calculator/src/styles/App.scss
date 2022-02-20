@@ -138,6 +138,15 @@ padding: 0.3rem;
   border: none;
   border-radius: 5px;
 }
+.inputBtn-active {
+  background-color: $strongCyan;
+  width: 150px;
+  margin: 0.5rem 0;
+  padding: 0.5rem 0;
+  color: $veryDarkCyan;
+  border: none;
+  border-radius: 5px;
+}
 
 .inputBtn:hover {
   color: $veryDarkCyan;

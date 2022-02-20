@@ -3,14 +3,6 @@ import React from 'react';
 
 
 const PartyInput = ({handlePeople, numPeople}) => {
-  // const showNumPeople = (numPeople) => {
-  //   if (numPeople === "" || isNaN(numPeople) === true) {
-  //     return "";
-  //   } else {
-  //     return numPeople;
-  //   }
-  // }
-console.log("from PartyInput: ", numPeople)
 
   return (
   <div className="party-input-bar">
