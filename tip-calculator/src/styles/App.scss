@@ -112,6 +112,16 @@ padding: 0.3rem;
     font-weight: 700;
     color: $veryDarkCyan;
     padding-right: 10px;
+    border: none;
+    border-radius: 5px;
+  }
+  input[name="inputBill"]{
+    background: url(../images/icon-dollar.png) no-repeat left 15px center;
+    background-color: $lightGrayishCyan2;
+  }
+  input[name="inputParty"]{
+    background: url(../images/icon-person.png) no-repeat left 15px center;
+        background-color: $lightGrayishCyan2;
   }
   input:focus::placeholder {
     color:transparent;

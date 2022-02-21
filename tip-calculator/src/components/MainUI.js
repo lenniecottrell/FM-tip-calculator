@@ -7,7 +7,6 @@ const MainUI = () => {
   const [billTotal, setBillTotal] = useState("")
   const [tipPercent, setTipPercent] = useState(0)
   const [isActive, setIsActive] = useState(false)
-  const [percentActive, setPercentActive] = useState(false)
 
   const handleReset = () => {
     console.log("clicked reset")
@@ -31,8 +30,6 @@ const MainUI = () => {
           numPeople={numPeople}
           billTotal={billTotal}
           setIsActive={setIsActive}
-          percentActive={percentActive}
-          setPercentActive={setPercentActive}
         />
         <Results 
           billTotal={billTotal}
