@@ -83,6 +83,7 @@ $white:hsl(0, 0%, 100%);
   padding: 0rem 1.5rem;
   border-radius: 1.2rem 1.2rem 0 0;
 }
+
 //remove increment/decrement buttons from the input fields
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
@@ -235,4 +236,96 @@ input[name="custom-button"] {
   margin: 1rem 0 0 0;
   padding: 0.5rem;
   font-size: 20px;
+}
+
+
+@media only screen and (min-width: 375px) {
+  .App {
+    display: flex;
+    height: 100vh;
+  }
+  .main-ui {
+    border: 2px solid red;
+    max-width: 75vw;
+    display: flex;
+    flex-direction: row;
+    padding: 1.75rem;
+    border-radius: 1.2rem;
+  }
+  
+  .inputs {
+    border: 2px solid saddlebrown;
+    margin: 0 1.5rem 0 0;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+   .inputField {
+    margin-top: 10px;
+    padding: 0.25rem;
+    padding-right: 15px;
+    }
+  }
+
+  .results {
+    border: 2px solid blue;
+    margin-top: 0rem;
+    padding: 2.5rem;
+    width: 50%;
+  }
+
+//   .button-grid {
+//     border: 2px solid red;
+//     display: flex;
+//     flex-wrap: wrap;
+//     justify-content: space-between;
+//     font-weight: 700;
+//   }
+  
+//   .input-bar, .party-input-bar {
+//     border: 2px solid blue;
+//     display: flex;
+//     flex-direction: column;
+//   }
+  
+  .input-button-section {
+    //margin: 1.5rem 2.5rem;
+    border: 2px solid purple;
+  }
+  
+  .inputBtn {
+    width: 110px;
+    margin: 0.25rem 0;
+    padding: 0.25rem 0;
+  }
+  
+  input[name="custom-button"] {
+    margin: 0.25rem 0;
+    padding: 0.25rem 0;
+    width: 110px;
+    padding-right: 0.6rem;
+  }
+  
+  .result-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 0;
+  }
+  
+  .result-label {
+    h2{
+      font-size: 16px;
+    }
+  }
+  
+  .result-amount {
+    font-size: 38px;
+  }
+
+  .resetBtn {
+    margin-top: 8rem;
+  }
+
 }
