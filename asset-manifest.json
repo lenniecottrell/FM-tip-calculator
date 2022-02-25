@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/FM-tip-calculator/static/css/main.23d67837.css",
+    "main.js": "/FM-tip-calculator/static/js/main.b417b1e1.js",
+    "index.html": "/FM-tip-calculator/index.html",
+    "main.23d67837.css.map": "/FM-tip-calculator/static/css/main.23d67837.css.map",
+    "main.b417b1e1.js.map": "/FM-tip-calculator/static/js/main.b417b1e1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.23d67837.css",
+    "static/js/main.b417b1e1.js"
+  ]
+}
