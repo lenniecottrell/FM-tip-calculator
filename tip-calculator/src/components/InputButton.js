@@ -1,8 +1,7 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 
 const InputButton = ({tipPercent, setTipPercent, percentActive, setPercentActive}) => {
-  //const [clicked, setClicked] = useState(false);
 
   const handlePercent = (e) => {
     setTipPercent(e.target.value / 100)
