@@ -34,6 +34,7 @@ const Inputs = ({setTipPercent, setNumPeople, billTotal, setBillTotal, numPeople
     }
 
 
+    //create input button grid
     const tips = [5, 10, 15, 25, 50];
 
     const buttonGrid = tips.map((tip) => {
@@ -57,10 +58,3 @@ const Inputs = ({setTipPercent, setNumPeople, billTotal, setBillTotal, numPeople
 };
 
 export default Inputs;
-
-{/* 
-            <InputButton tipPercent="5" setTipPercent={setTipPercent} percentActive={percentActive} setPercentActive={setPercentActive}/>
-            <InputButton tipPercent="10" setTipPercent={setTipPercent} percentActive={percentActive} setPercentActive={setPercentActive}/>
-            <InputButton tipPercent="15" setTipPercent={setTipPercent} percentActive={percentActive} setPercentActive={setPercentActive}/>
-            <InputButton tipPercent="25" setTipPercent={setTipPercent} percentActive={percentActive} setPercentActive={setPercentActive}/>
-            <InputButton tipPercent="50" setTipPercent={setTipPercent} percentActive={percentActive} setPercentActive={setPercentActive}/> */}
