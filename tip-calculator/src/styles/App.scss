@@ -55,6 +55,8 @@ $darkGrayishCyan2: hsl(184, 14%, 56%);
 $lightGrayishCyan1: hsl(185, 41%, 84%);
 $lightGrayishCyan2: hsl(189, 41%, 97%);
 $white:hsl(0, 0%, 100%);
+$inputFocus:hsl(173, 35%, 62%);
+$btnActiveHover:hsl(173, 61%, 77%);
 
 .App {
   // border: 2px solid red;
@@ -106,7 +108,13 @@ padding: 0.3rem;
   }
   .inputField {
     margin-top: 10px;
+    border:2px solid transparent;
   }
+  .inputField:focus {
+    outline: none !important;
+    border:2px solid $inputFocus;
+  }
+  
   input {
     width: 100%;
     text-align: right;
@@ -157,6 +165,9 @@ padding: 0.3rem;
   color: $veryDarkCyan;
   border: none;
   border-radius: 5px;
+}
+.inputBtn-active:hover{
+  background: $btnActiveHover;
 }
 
 .inputBtn:hover {
@@ -236,6 +247,10 @@ input[name="custom-button"] {
   margin: 1rem 0 0 0;
   padding: 0.5rem;
   font-size: 20px;
+}
+
+.resetBtn-active:hover{
+  background: $btnActiveHover;
 }
 
 
