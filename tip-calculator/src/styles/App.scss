@@ -57,6 +57,7 @@ $lightGrayishCyan2: hsl(189, 41%, 97%);
 $white:hsl(0, 0%, 100%);
 $inputFocus:hsl(173, 35%, 62%);
 $btnActiveHover:hsl(173, 61%, 77%);
+$warningColor: #D18F7F;
 
 .App {
   // border: 2px solid red;
@@ -114,6 +115,10 @@ padding: 0.3rem;
     outline: none !important;
     border:2px solid $inputFocus;
   }
+  .inputField-zero {
+    margin-top: 10px;
+    border: 2px solid $warningColor;
+  }
   
   input {
     width: 100%;
@@ -130,7 +135,7 @@ padding: 0.3rem;
   }
   input[name="inputParty"]{
     background: url(../images/icon-person.png) no-repeat left 15px center;
-        background-color: $lightGrayishCyan2;
+    background-color: $lightGrayishCyan2;
   }
   input:focus::placeholder {
     color:transparent;
@@ -190,6 +195,10 @@ input[name="custom-button"] {
   font-weight: 700;
   opacity: 1;
   color: $darkGrayishCyan1;
+}
+
+.party-input-bar {
+  display: inline;
 }
 
 .results {
@@ -253,6 +262,15 @@ input[name="custom-button"] {
   background: $btnActiveHover;
 }
 
+#warning {
+  display: none;
+}
+
+#warning-on {
+  display: inline;
+  margin: 0 0 0 7rem;
+  color: $warningColor;
+}
 
 @media only screen and (min-width: 376px) {
   .App {
@@ -289,25 +307,6 @@ input[name="custom-button"] {
     margin-top: 0rem;
     padding: 2.5rem;
     width: 50%;
-  }
-
-//   .button-grid {
-//     border: 2px solid red;
-//     display: flex;
-//     flex-wrap: wrap;
-//     justify-content: space-between;
-//     font-weight: 700;
-//   }
-  
-//   .input-bar, .party-input-bar {
-//     border: 2px solid blue;
-//     display: flex;
-//     flex-direction: column;
-//   }
-  
-  .input-button-section {
-    // display: flex;
-    // flex-wrap: wrap;
   }
   
   .inputBtn {

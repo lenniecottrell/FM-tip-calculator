@@ -6,7 +6,8 @@ import InputCustomButton from './InputCustomButton'
 
 const Inputs = ({setTipPercent, setNumPeople, billTotal, setBillTotal, numPeople, setIsActive}) => {
     const [percentActive, setPercentActive] = useState(false);
-    
+    const [isZero, setIsZero] = useState(true);
+
     const handleBillInput = (e, numPeople) => {
       if (e.target.value > 0) {
         setIsActive(true);
@@ -31,6 +32,10 @@ const Inputs = ({setTipPercent, setNumPeople, billTotal, setBillTotal, numPeople
       }
 
       setNumPeople(e.target.value);
+
+      if (numPeople === 0 || isNaN(numPeople)=== true) {
+        setIsZero(true);
+        } else setIsZero(false);
     }
 
 
@@ -52,7 +57,7 @@ const Inputs = ({setTipPercent, setNumPeople, billTotal, setBillTotal, numPeople
           <InputCustomButton setTipPercent={setTipPercent}/>
         </div>
       </div>
-      <PartyInput handlePeople={handlePeople} numPeople={numPeople}/>
+      <PartyInput handlePeople={handlePeople} numPeople={numPeople} isZero={isZero}/>
   </div>
   );
 };
