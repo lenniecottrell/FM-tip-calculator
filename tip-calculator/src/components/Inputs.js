@@ -5,7 +5,8 @@ import InputButton from './InputButton'
 import InputCustomButton from './InputCustomButton'
 
 const Inputs = ({setTipPercent, setNumPeople, billTotal, setBillTotal, numPeople, setIsActive}) => {
-    const [percentActive, setPercentActive] = useState(false);
+    const [percentActive, setPercentActive] = useState(undefined);
+    const [buttonState, setButtonState] = useState(true)
     const [isZero, setIsZero] = useState(true);
 
     const handleBillInput = (e, numPeople) => {
@@ -38,14 +39,40 @@ const Inputs = ({setTipPercent, setNumPeople, billTotal, setBillTotal, numPeople
         } else setIsZero(false);
     }
 
+    const handlePercentChange = (e) => {
+      console.log(e.target.value)
+      console.log(e.target)
+
+
+      let button_array = [...buttonGrid]
+      console.log(button_array)
+      console.log(button_array[0])
+      //let current_button={...button_array[]}
+      // for (let i = 0; i < button_array.length; i++) {
+      //   if (e.target.value === button_array[i].key) {
+      //     useState(button_array[i].key  )
+      //     console.log(`it's a match!`)
+      //   }
+      // }
+
+
+      setTipPercent(e.target.value / 100)
+    }
 
     //create input button grid
     const tips = [5, 10, 15, 25, 50];
 
-    const buttonGrid = tips.map((tip) => {
-      return <InputButton key={tip.toString()} tipPercent={tip.toString()} setTipPercent={setTipPercent} percentActive={percentActive} setPercentActive={setPercentActive} />
+    const buttonGrid = tips.map((tip, index) => {
+      return <InputButton key={index} id={index} tipPercent={tip.toString()} setTipPercent={setTipPercent} percentActive={percentActive} setPercentActive={setPercentActive} handlePercentChange={handlePercentChange}/>
     });
     
+
+/*
+buttonGrid is an array of objects
+
+splice(start, deleteCount, item) changes the contents 
+slice(start, end) non-inclusive of end, creates a copy
+*/
 
   return (
   <div className='inputs'>

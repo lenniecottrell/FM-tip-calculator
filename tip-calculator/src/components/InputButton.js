@@ -1,15 +1,11 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 
-const InputButton = ({tipPercent, setTipPercent, percentActive, setPercentActive}) => {
-  const [innerActive, setInnerActive] = useState(false);
+const InputButton = ({tipPercent, setTipPercent, percentActive, setPercentActive, handlePercentChange, index}) => {
 
-  const handlePercent = (e) => {
-    setTipPercent(e.target.value / 100)
-    setInnerActive(!innerActive)
-  }
+  console.log("percent active: ", percentActive)
  
-  return <button className={`inputBtn${innerActive ? "-active": ''}`} value={tipPercent} onClick={handlePercent}>{tipPercent}%</button>;
+  return <button id={index} className={`inputBtn`} value={tipPercent} onClick={handlePercentChange}>{tipPercent}%</button>;
 };
 
 export default InputButton;
