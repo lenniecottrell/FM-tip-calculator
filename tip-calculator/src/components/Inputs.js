@@ -64,7 +64,7 @@ const Inputs = ({setTipPercent, setNumPeople, billTotal, setBillTotal, numPeople
         <p>Select Tip %</p>
         <div className='button-grid'>
           {buttonGrid}
-          <InputCustomButton setTipPercent={setTipPercent}/>
+          <InputCustomButton setTipPercent={setTipPercent} setSelectedTip={setSelectedTip}/>
         </div>
       </div>
       <PartyInput handlePeople={handlePeople} numPeople={numPeople} isZero={isZero}/>
