@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import BillTotalInput from './BillTotalInput'
 import PartyInput from './PartyInput'
 import InputButton from './InputButton'
@@ -23,6 +23,7 @@ const Inputs = ({setTipPercent, setNumPeople, billTotal, setBillTotal, numPeople
     }
 
     const handlePeople = (e, billTotal) => {
+          
       console.log(e.target.value);
       if (e.target.value === "") {
         setIsActive(false)
@@ -33,13 +34,16 @@ const Inputs = ({setTipPercent, setNumPeople, billTotal, setBillTotal, numPeople
       } else if (e.target.value === "" && billTotal > 0) {
         setIsActive(true);
       }
-
       setNumPeople(e.target.value);
-
-      if (numPeople == 0) {
-        setIsZero(true);
-        } else setIsZero(false);
     }
+
+      useEffect(() => {
+        if (numPeople == 0 || isNaN(numPeople)) {
+          setIsZero(true);
+          } else setIsZero(false);
+      }, [numPeople, setIsZero])
+
+
 
     const handlePercentChange = (e) => {
       setSelectedTip(e.target.value)         
