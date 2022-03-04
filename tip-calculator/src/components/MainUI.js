@@ -7,12 +7,13 @@ const MainUI = () => {
   const [billTotal, setBillTotal] = useState("")
   const [tipPercent, setTipPercent] = useState(0)
   const [isActive, setIsActive] = useState(false)
+  const [isZero, setIsZero] = useState(false);
 
   const handleReset = () => {
-    console.log("clicked reset")
     setBillTotal("");
     setNumPeople("")
     setIsActive(false);
+    setIsZero(false)
   }
   
   useEffect(() => {
@@ -30,6 +31,8 @@ const MainUI = () => {
           numPeople={numPeople}
           billTotal={billTotal}
           setIsActive={setIsActive}
+          isZero={isZero}
+          setIsZero={setIsZero}
         />
         <Results 
           billTotal={billTotal}
@@ -37,6 +40,7 @@ const MainUI = () => {
           numPeople={numPeople}
           isActive={isActive}
           handleReset={handleReset}
+          isZero={isZero}
         />
     </div>
     );

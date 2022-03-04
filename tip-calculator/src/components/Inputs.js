@@ -4,13 +4,15 @@ import PartyInput from './PartyInput'
 import InputButton from './InputButton'
 import InputCustomButton from './InputCustomButton'
 
-const Inputs = ({setTipPercent, setNumPeople, billTotal, setBillTotal, numPeople, setIsActive}) => {
+const Inputs = ({setTipPercent, setNumPeople, billTotal, setBillTotal, numPeople, setIsActive, isZero, setIsZero}) => {
     const [selectedTip, setSelectedTip] = useState(15);
-    const [isZero, setIsZero] = useState(true);
 
     const handleBillInput = (e, numPeople) => {
       if (e.target.value > 0) {
         setIsActive(true);
+        if (numPeople === "" || numPeople === 0) {
+          setIsZero(true);
+        }
       } else if (e.target.value === "" && numPeople > 0) {
         setIsActive(true);
       } else if (e.target.value === "") {
@@ -21,6 +23,7 @@ const Inputs = ({setTipPercent, setNumPeople, billTotal, setBillTotal, numPeople
     }
 
     const handlePeople = (e, billTotal) => {
+      console.log(e.target.value);
       if (e.target.value === "") {
         setIsActive(false)
       }
@@ -33,7 +36,7 @@ const Inputs = ({setTipPercent, setNumPeople, billTotal, setBillTotal, numPeople
 
       setNumPeople(e.target.value);
 
-      if (numPeople === 0 || isNaN(numPeople)=== true) {
+      if (numPeople == 0) {
         setIsZero(true);
         } else setIsZero(false);
     }

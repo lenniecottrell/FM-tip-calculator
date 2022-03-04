@@ -97,11 +97,11 @@ input[type=number] {
 -moz-appearance: textfield;
 background-color: $lightGrayishCyan2;
 border: none;
-padding: 0.3rem;
+padding: 4px 15px 4px 4px;
 }
 
 .inputs {
-  margin: 1.5rem 0.5rem;
+  //margin: 1.5rem 0.5rem;
   label, p{
     font-weight: 700;
     color:$darkGrayishCyan1;
@@ -118,6 +118,8 @@ padding: 0.3rem;
   .inputField-zero {
     margin-top: 10px;
     border: 2px solid $warningColor;
+    padding: 4px 15px 4px 4px;
+    outline: none;
   }
   
   input {
